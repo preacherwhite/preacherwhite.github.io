@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vCard - Personal Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar="">
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Daniel Wang" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Daniel Wangk">Daniel Wang</h1>
+
+          <p class="title">Student researcher</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn="">
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down" role="img" class="md hydrated" aria-label="chevron down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline" role="img" class="md hydrated" aria-label="mail outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:dhw2@andrew.cmu.edu" class="contact-link">dhw2@andrew.cmu.edu</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline" role="img" class="md hydrated" aria-label="phone portrait outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+7245084603" class="contact-link">+1 (724) 508-4603</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline" role="img" class="md hydrated" aria-label="calendar outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="2000-11-15">November 15, 2000</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline" role="img" class="md hydrated" aria-label="location outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Pittsburgh, PA, USA</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook" role="img" class="md hydrated" aria-label="logo facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter" role="img" class="md hydrated" aria-label="logo twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram" role="img" class="md hydrated" aria-label="logo instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link="">About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link="">Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link="">Project</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I'm a Senior student at Carnegie Mellon School of Computer Science, majoring in Computer Science. My main experience focuses on Neural Computation research.
+          </p>
+
+          <p>
+            My research area is mainly about using computational models such as Neural Networks to discover features of the neurons in our brains. I also aim to create computational models that can simulate natural neuron behaviors. Apart from that, I am also an experience programmer, as well as being knowledgeable in machine learning.
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">My Skills</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Programming</h4>
+
+                <p class="service-item-text">Capable of coding in Python, C, C++, Java, Go(learning). Can also use Matlab and R(learning), quick to pick up brand new languages</p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Machine Learning</h4>
+
+                <p class="service-item-text">Experienced in PyTorch development, understands and implements variety of models including DNN, CNN, Autoencoder, RNN</p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Neuroscience</h4>
+
+                <p class="service-item-text">Knowledgable in Neuroscience terms and concepts, experienced in working with neuronal data and models</p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Collaboration</h4>
+
+                <p class="service-item-text">Experienced in working with people of different background, skilled in professional communication and presentation</p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+
+      </article>
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline" role="img" class="md hydrated" aria-label="book outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Carnegie Mellon University, School of Computer Science</h4>
+
+              <span>2019-2023</span>
+
+              <p class="timeline-text">Minor in Neural Computation</p>
+
+            </li>
+
+            
+
+            
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline" role="img" class="md hydrated" aria-label="book outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience &amp; Projects</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Undergraduate Research fellow, Lee's lab, Carnegie Mellon University</h4>
+
+              <span>2021 — Present</span>
+
+              <p class="timeline-text"> Researched on how 30000+ data enables Neural Network models to exhibit more complex behaviors of neurons.
+</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Adaptive Log-norm Regularization Project</h4>
+
+              <span>2022-Present</span>
+
+              <p class="timeline-text"> Proposed a novel regularization method in Machine Learning that penalizes model complexity with adaptive log 
+function while solving the dis-continuity problem.</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Web Crawling Project</h4>
+
+              <span>2021</span>
+
+              <p class="timeline-text">Gathered Gigabytes of asset info data from opeanseas.com with Python and website API</p>
+
+            </li>
+
+          <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Music Generation Project</h4>
+
+              <span>2020</span>
+
+              <p class="timeline-text">Created a novel machine learning model based on LSTM and RBM that can capture and learn information from 
+music note sequences.
+
+</p>
+
+            </li><li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Database Design Project</h4>
+
+              <span>2020</span>
+
+              <p class="timeline-text">Designed a relational database structure for theoretical food-delivery online platforms to store and manage data.
+
+</p>
+
+            </li></ol>
+
+        </section>
+
+        
+
+      </article>
+
+
+      <!--
+        - #Project
+      -->
+
+      <article class="project" data-page="project">
+
+        <header>
+          <h2 class="h2 article-title">Project example</h2>
+        </header>
+
+        <section class="project-text">
+          <p>
+            This project focuses on utilizing large quantities of calcium imaging neuron data to train CNN models. 
+            By combining state-of-the art neuron model and big data, the model was able to exhibit more complex behaviors
+            from cells in the primary visual cortex.
+          </p>
+          <p>
+            The data were based on macaque monkey's neuron response given gray-scale image stimuli. These images were cropped samples
+            from natural images. We then train CNN networks based on this data. The CNN networks recieve the images seen by the monkey as
+            input, and are trained to predict the neuron responses as output. 
+          </p>
+          <p>
+            Below is a visualization example for site m1s1. These images are generated using back-propagation on random images.
+            In short, we fix a trained network for neuron prediction, and input random images to see the predicted response of neurons.
+            We can thus use the model to get the gradient of the response (we use the negation of the response as loss) 
+            for each image pixel, and optimize the image to maximize the response. This basically 
+            allows us to create a estimation of each neuron's perceptive field.
+          </p>
+          <h4 class="h4 vis-sample-item">Neuron Visualizations example</h4>
+          <figure class="Project-img">
+            <img src="./assets/images/Vis-1.png" alt="visualization sample 1" loading="lazy">
+          </figure>
+          <p>
+            
+          </p>
+          <p>
+            The effect of the big data is shown by this picture:
+          </p>
+          <h4 class="h4 vis-sample-item">Correlation change example</h4>
+          <figure class="Project-img">
+            <img src="./assets/images/R_curve_40.png" alt="R-curver sample" loading="lazy">
+          </figure>
+          <p>
+            
+          </p>
+          <p>
+            This is the curve of change in correlation of 40 selected neurons. The correlation is measured by the real response values of 
+            the validation set images, versus the predicted response values of the same images (using the model). The x axis labels the number
+            of samples used to train the models, and the training samples are in the original order in which they were presented to the monkey.
+            Previous experiments usually don't collect data as much as 30k, but this graph shows the signifigance of data quantity to train effective models
+            that can determine neurons' preference in different image stimuli.
+          </p>
+        </section>
+      
+
+      </article>
+
+
+
+
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+</body>
+
+</html>
