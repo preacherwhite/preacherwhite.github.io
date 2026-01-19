@@ -42,7 +42,7 @@ experience:
   academic:
     - lab: Yale Vision Lab
       group: Yale University
-      role: Research Assistant (Advisor: Alex Wong)
+      role: "Research Assistant (Advisor: Alex Wong)"
       dates: Aug 2023 -- Present
       projects:
         - name: Depth-prediction as Pretraining for Object Detection
@@ -68,7 +68,7 @@ experience:
             - "Demonstrated state-of-the-art performance on the NYU Depth V2 and KITTI depth datasets, confirming the effectiveness of integrating language priors in depth estimation."
     - lab: Lee's Lab
       group: Carnegie Mellon University
-      role: Research Assistant (Advisor: Tai-Sing Lee)
+      role: "Research Assistant (Advisor: Tai-Sing Lee)"
       dates: Aug 2021 -- May 2023
       projects:
         - name: Revealing the Complexity of V1 Neural Codes via CNN Modeling
