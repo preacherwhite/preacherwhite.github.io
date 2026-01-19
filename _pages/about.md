@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: ""
-excerpt: ""
+excerpt: "Ph.D. Student at Yale University"
 author_profile: true
 redirect_from: 
   - /about/
@@ -17,42 +17,93 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero, elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim. Curabitur mattis vulputate dui, tincidunt varius libero luctus eu. Mauris mauris nulla, scelerisque eget massa id, tincidunt congue felis. Sed convallis tempor ipsum rhoncus viverra. Pellentesque nulla orci, accumsan volutpat fringilla vitae, maximus sit amet tortor. Aliquam ultricies odio ut volutpat scelerisque. Donec nisl nisl, porttitor vitae pharetra quis, fringilla sed mi. Fusce pretium dolor ut aliquam consequat. Cras volutpat, tellus accumsan mattis molestie, nisl lacus tempus massa, nec malesuada tortor leo vel quam. Aliquam vel ex consectetur, vehicula leo nec, efficitur eros. Donec convallis non urna quis feugiat.
+I am a 3rd year Ph.D. student in Computer Science at **Yale University**, advised by [Alex Wong](https://alexwong.net). My research interests lie in **Computer Vision** and **Neural Machine Translation**. Previously, I received my B.S. in Computer Science from **Carnegie Mellon University** with University Honors and a Minor in Neural Computation.
 
-My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
+You can find my full CV [here](files/cv.pdf) (placeholder link).
 
+<a href='https://scholar.google.com/citations?user=Rk_pDPEAAAAJ&hl=en'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>
 
 # 🔥 News
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2024.06*: &nbsp;🎉🎉 Joined **RTX** as a Computer Vision Intern.
+- *2024.05*: &nbsp;🎉🎉 Joined **Futurewei Technologies** as a Computer Vision Intern.
+- *2023.08*: &nbsp;🎉🎉 Started Ph.D. in Computer Science at **Yale University**.
+- *2023.06*: &nbsp;🎉🎉 Joined **Lenovo** as a Computer Vision Intern.
 
-# 📝 Publications 
+# 📝 Selected Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
+<div class='paper-box'><div class='paper-box-text' markdown="1">
 
-[Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
+[ODE-GS: Latent ODEs for Dynamic Scene Extrapolation with 3D Gaussian Splatting](javascript:void(0))
 
-**Kaiming He**, Xiangyu Zhang, Shaoqing Ren, Jian Sun
+**D. Wang**, P. Rim, T. Tian, A. Wong, G. Sundaramoorthi
 
-[**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-</div>
-</div>
+*arXiv Preprint*, 2024. (Under review at ICLR 2026)
+</div></div>
 
-- [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
+<div class='paper-box'><div class='paper-box-text' markdown="1">
+
+[Binding touch to everything: Learning unified multimodal tactile representations](javascript:void(0))
+
+F. Yang, C. Feng, Z. Chen, H. Park, **D. Wang**, Y. Dou, et al.
+
+*Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)*, 2024.
+</div></div>
+
+<div class='paper-box'><div class='paper-box-text' markdown="1">
+
+[WorDepth: Variational language prior for monocular depth estimation](javascript:void(0))
+
+Z. Zeng, **D. Wang**, F. Yang, H. Park, S. Soatto, D. Lao, A. Wong
+
+*Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)*, 2024.
+</div></div>
+
+<div class='paper-box'><div class='paper-box-text' markdown="1">
+
+[On the viability of monocular depth pre-training for semantic segmentation](javascript:void(0))
+
+D. Lao, F. Yang, **D. Wang**, H. Park, S. Lu, A. Wong, S. Soatto
+
+*European Conference on Computer Vision (ECCV)*, 2024.
+</div></div>
 
 # 🎖 Honors and Awards
-- *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2025* **NSF Graduate Research Fellowship** 🏆
+- *2023* 4th position in the 2023 VIPriors Object Detection Challenge (ICCV 2023 workshop)
+- *2023* University Honors, Carnegie Mellon University (2023)
 
-# 📖 Educations
-- *2019.06 - 2022.04 (now)*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2015.09 - 2019.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+# 📖 Education
+- *2023.08 - Present*, **Yale University**, New Haven, CT
+  - Ph.D. in Computer Science (Expected May 2029)
+  - Advisor: Alex Wong
+  - Awards: **NSF Graduate Research Fellowship (2025)**
 
-# 💬 Invited Talks
-- *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/)
+- *2019.08 - 2023.05*, **Carnegie Mellon University**, Pittsburgh, PA
+  - B.S. in Computer Science, Minor in Neural Computation
+  - University Honors
 
-# 💻 Internships
-- *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
+# 💻 Industry Experience
+- *2024.06 - Present*, **RTX**, Remote
+  - Computer Vision Intern
+  - Proposed **ODE-GS**, a novel framework integrating 3D Gaussian Splatting with Transformer-based latent neural ODEs.
+  - Achieved SOTA performance on D-NeRF, NVFi, and HyperNeRF benchmarks.
+
+- *2024.05 - 2024.08*, **Futurewei Technologies (IC Lab)**, Remote
+  - Computer Vision Intern
+  - Proposed a novel pipeline for unseen 3D reconstruction and denoising.
+  - Developed a "Gaussian Importance" metric to prune erroneous geometry.
+  - Outperformed SOTA methods (SplatFormer) by **+2.30 dB PSNR**.
+
+- *2023.06 - 2023.08*, **Lenovo**, Remote
+  - Computer Vision Intern
+  - Developed and trained object detection and visual grounding models.
+  - Pretrained YOLOv8 backbone using masked image modeling (MIM).
+  - Secured 4th position in the 2023 VIPriors Object Detection Challenge.
+
+# 🛠 Technical Skills
+- **Programming:** C, C++, Python, Java, SQL, SML, HTML, CSS, JavaScript, GO
+- **Data Analysis:** PyTorch, MATLAB, R
+- **Software & Tools:** Microsoft Office, Git, LaTeX, Linux
+
+# 🍎 Academic Service
+- **Reviewer:** CVPR (2025, 2026), ICLR (2025, 2026), NeurIPS (2024, 2025)
