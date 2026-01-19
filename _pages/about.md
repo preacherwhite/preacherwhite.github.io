@@ -121,5 +121,5 @@ D. Lao, F. Yang, **D. Wang**, H. Park, S. Lu, A. Wong, S. Soatto
 # 🍎 Academic Service
 - **Reviewer:** CVPR (2025, 2026), ICLR (2025, 2026), NeurIPS (2024, 2025)
 
-<script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=iZ5OYAIw6YlHTKX1kDtj50JutlocJzkOmjacYPN4Kvk"></script>
+<script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=GO4IA0rrJ5OaTEqd2tJfw5POEs-FHBxW091CxOql7OI&cl=ffffff&w=a"></script>
 
