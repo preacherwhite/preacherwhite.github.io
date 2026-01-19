@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Daniel Wang"
-description              : "Ph.D. student at Yale University. Research interests: Computer Vision, Neural Machine Translation."
+description              : "Ph.D. student at Yale University. Interested in 3D, Generation, and Representation Learning."
 repository               : "preacherwhite/preacherwhite.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -25,7 +25,7 @@ author:
   avatar           : "images/android-chrome-512x512.png"
   bio              : "Ph.D. student at Yale University"
   location         : "New Haven, CT"
-  employer         : "Yale University"
+  employer         : "Yale Vision Lab"
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=Rk_pDPEAAAAJ&hl=en"
   email            : "daniel.wang.dhw33@yale.edu"

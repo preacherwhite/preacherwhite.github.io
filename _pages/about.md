@@ -23,6 +23,15 @@ You can find my full CV [here](files/cv.pdf) (placeholder link).
 
 <a href='https://scholar.google.com/citations?user=Rk_pDPEAAAAJ&hl=en'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>
 
+<div style="padding: 1.5rem; background: linear-gradient(135deg, #f0f7ff 0%, #faf9f7 100%); border-radius: 12px; border-left: 4px solid #3b7dd8; margin-top: 2rem; margin-bottom: 2rem;">
+    <div style="font-family: 'Inter', sans-serif; font-size: 0.95rem; color: #374151; font-weight: 500; margin-bottom: 0.5rem;">
+        NSF Graduate Research Fellowship (2025) 🏆
+    </div>
+    <div style="font-size: 0.9rem; color: #6b7280;">
+        Awarded for potential significant research achievements in STEM.
+    </div>
+</div>
+
 # 🔥 News
 - *2024.06*: &nbsp;🎉🎉 Joined **RTX** as a Computer Vision Intern.
 - *2024.05*: &nbsp;🎉🎉 Joined **Futurewei Technologies** as a Computer Vision Intern.
@@ -83,27 +92,11 @@ D. Lao, F. Yang, **D. Wang**, H. Park, S. Lu, A. Wong, S. Soatto
   - University Honors
 
 # 💻 Industry Experience
-- *2024.06 - Present*, **RTX**, Remote
-  - Computer Vision Intern
-  - Proposed **ODE-GS**, a novel framework integrating 3D Gaussian Splatting with Transformer-based latent neural ODEs.
-  - Achieved SOTA performance on D-NeRF, NVFi, and HyperNeRF benchmarks.
+- *2025.05 - 2025.08*, **Futurewei Technologies (IC Lab)**, Santa Clara, CA
 
-- *2024.05 - 2024.08*, **Futurewei Technologies (IC Lab)**, Remote
-  - Computer Vision Intern
-  - Proposed a novel pipeline for unseen 3D reconstruction and denoising.
-  - Developed a "Gaussian Importance" metric to prune erroneous geometry.
-  - Outperformed SOTA methods (SplatFormer) by **+2.30 dB PSNR**.
+- *2024.06 - 2024-12*, **RTX**, Hartford, CT
 
-- *2023.06 - 2023.08*, **Lenovo**, Remote
-  - Computer Vision Intern
-  - Developed and trained object detection and visual grounding models.
-  - Pretrained YOLOv8 backbone using masked image modeling (MIM).
-  - Secured 4th position in the 2023 VIPriors Object Detection Challenge.
-
-# 🛠 Technical Skills
-- **Programming:** C, C++, Python, Java, SQL, SML, HTML, CSS, JavaScript, GO
-- **Data Analysis:** PyTorch, MATLAB, R
-- **Software & Tools:** Microsoft Office, Git, LaTeX, Linux
+- *2023.06 - 2023.08*, **Lenovo**, Beijing, China
 
 # 🍎 Academic Service
 - **Reviewer:** CVPR (2025, 2026), ICLR (2025, 2026), NeurIPS (2024, 2025)
