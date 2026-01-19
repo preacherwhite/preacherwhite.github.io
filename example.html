@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Wang | Computer Vision Researcher</title>
+    <meta name="description" content="Ph.D. student at Yale University researching computer vision and machine learning. Building systems that understand, reconstruct, and predict dynamic 3D scenes.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ::selection {
+            background: #3b7dd8;
+            color: white;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Source Serif 4', Georgia, serif;
+            background-color: #faf9f7;
+            color: #2d2d2d;
+            line-height: 1.6;
+        }
+
+        /* Animations */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .animate-in {
+            animation: fadeUp 0.8s ease forwards;
+        }
+
+        .delay-1 { animation-delay: 0.1s; opacity: 0; }
+        .delay-2 { animation-delay: 0.2s; opacity: 0; }
+        .delay-3 { animation-delay: 0.3s; opacity: 0; }
+        .delay-4 { animation-delay: 0.4s; opacity: 0; }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 1.25rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: rgba(250, 249, 247, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-logo {
+            font-family: 'Source Serif 4', serif;
+            font-weight: 600;
+            font-size: 1.25rem;
+            color: #1a1a1a;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        .nav-link {
+            color: #5a5a5a;
+            text-decoration: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link:hover {
+            color: #3b7dd8;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 6rem 4rem 4rem;
+            background: linear-gradient(180deg, #f0f7ff 0%, #faf9f7 50%);
+        }
+
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 6rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .hero-status {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #3b7dd8;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #4ade80;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .hero h1 {
+            font-family: 'Source Serif 4', serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            line-height: 1.2;
+            color: #1a1a1a;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-description {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: #4b5563;
+            max-width: 540px;
+            margin-bottom: 2rem;
+        }
+
+        .hero-description span {
+            color: #1a1a1a;
+            font-weight: 500;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 1.75rem;
+            background: #3b7dd8;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background: #2d6bc4;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 125, 216, 0.3);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            border: 2px solid #3b7dd8;
+            color: #3b7dd8;
+        }
+
+        .cta-secondary:hover {
+            background: #3b7dd8;
+            color: white;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .stat-number {
+            font-family: 'Source Serif 4', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: #3b7dd8;
+        }
+
+        .stat-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            color: #6b7280;
+        }
+
+        /* Headshot */
+        .headshot-container {
+            position: relative;
+        }
+
+        .headshot-bg {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: 20px;
+            bottom: 20px;
+            background: linear-gradient(135deg, #3b7dd8 0%, #60a5fa 100%);
+            border-radius: 20px;
+            opacity: 0.2;
+        }
+
+        .headshot {
+            position: relative;
+            z-index: 1;
+            width: 280px;
+            height: 280px;
+            border-radius: 20px;
+            object-fit: cover;
+            box-shadow: 0 20px 60px rgba(59, 125, 216, 0.2);
+            border: 4px solid white;
+        }
+
+        .headshot-placeholder {
+            width: 280px;
+            height: 280px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+            color: #4b5563;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 2rem;
+            box-shadow: 0 20px 60px rgba(59, 125, 216, 0.2);
+            border: 4px solid white;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Sections */
+        .section {
+            padding: 6rem 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Source Serif 4', serif;
+            font-size: 2.25rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            color: #6b7280;
+            margin-bottom: 2.5rem;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: #4b5563;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p:first-child {
+            font-size: 1.15rem;
+            color: #374151;
+        }
+
+        .about-text span {
+            color: #3b7dd8;
+            font-weight: 500;
+        }
+
+        .award-box {
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f0f7ff 0%, #faf9f7 100%);
+            border-radius: 12px;
+            border-left: 4px solid #3b7dd8;
+            margin-top: 2rem;
+        }
+
+        .award-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: #374151;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .award-desc {
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+
+        /* Research Interests */
+        .research-section {
+            padding: 6rem 4rem;
+            background: white;
+        }
+
+        .research-section .section-title,
+        .research-section .section-subtitle {
+            text-align: center;
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 1rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .interest-card {
+            background: linear-gradient(135deg, #f0f7ff 0%, #faf9f7 100%);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid #e8f0fe;
+            transition: all 0.3s ease;
+        }
+
+        .interest-card:hover {
+            background: linear-gradient(135deg, #e3effd 0%, #f5f4f2 100%);
+            transform: translateY(-4px);
+        }
+
+        .interest-card h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+
+        .interest-card p {
+            font-size: 0.9rem;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        /* Publications */
+        .pub-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .pub-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transition: all 0.4s ease;
+        }
+
+        .pub-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(59, 125, 216, 0.15);
+        }
+
+        .pub-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .pub-image-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #6b7280;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+        }
+
+        .pub-content {
+            padding: 1.5rem;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.35rem 0.85rem;
+            background: #e8f4e8;
+            color: #2d7d46;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 20px;
+        }
+
+        .venue-badge {
+            background: #e8f0fe;
+            color: #3b7dd8;
+        }
+
+        .first-author-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+        }
+
+        .pub-title {
+            font-family: 'Source Serif 4', serif;
+            font-size: 1.1rem;
+            font-weight: 500;
+            line-height: 1.4;
+            color: #1a1a1a;
+            margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .pub-authors {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            color: #6b7280;
+            line-height: 1.5;
+        }
+
+        /* Experience */
+        .experience-section {
+            padding: 6rem 4rem;
+            background: linear-gradient(180deg, #faf9f7 0%, #f0f7ff 100%);
+        }
+
+        .experience-section .section-title,
+        .experience-section .section-subtitle {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .exp-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .exp-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .exp-card:hover {
+            border-color: #3b7dd8;
+            box-shadow: 0 8px 30px rgba(59, 125, 216, 0.1);
+        }
+
+        .exp-period {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.8rem;
+            color: #3b7dd8;
+            margin-bottom: 0.75rem;
+        }
+
+        .exp-company {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.25rem;
+        }
+
+        .exp-role {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: #6b7280;
+            margin-bottom: 1.25rem;
+        }
+
+        .exp-highlights {
+            list-style: none;
+            padding: 0;
+        }
+
+        .exp-highlights li {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+            color: #4b5563;
+            line-height: 1.6;
+        }
+
+        .exp-highlights li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #3b7dd8;
+            font-weight: 600;
+        }
+
+        /* Academic Service */
+        .service-section {
+            padding: 4rem;
+            background: white;
+        }
+
+        .service-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .service-info h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-info p {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: #6b7280;
+        }
+
+        .service-venues {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .service-venues span:first-child {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            color: #9ca3af;
+        }
+
+        .venue-tag {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #374151;
+            padding: 0.5rem 1rem;
+            background: #f3f4f6;
+            border-radius: 6px;
+        }
+
+        /* Contact */
+        .contact-section {
+            padding: 6rem 4rem;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            font-family: 'Source Serif 4', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .contact-section p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            opacity: 0.9;
+            margin-bottom: 2.5rem;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .contact-buttons .cta-button {
+            background: white;
+            color: #1e40af;
+        }
+
+        .contact-buttons .cta-secondary {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .contact-buttons .cta-secondary:hover {
+            background: white;
+            color: #1e40af;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            padding: 2rem 4rem;
+            background: #1e3a8a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .headshot-container {
+                order: -1;
+                justify-self: center;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .research-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .pub-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .exp-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 5rem 1.5rem 3rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section {
+                padding: 4rem 1.5rem;
+            }
+
+            .research-section,
+            .experience-section,
+            .service-section {
+                padding: 4rem 1.5rem;
+            }
+
+            .research-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-stats {
+                flex-wrap: wrap;
+            }
+
+            .service-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .service-venues {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-logo">Daniel Wang</div>
+        <div class="nav-links">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#research" class="nav-link">Research</a>
+            <a href="#publications" class="nav-link">Publications</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-status animate-in delay-1">
+                    <span class="status-dot"></span>
+                    Open to Research Opportunities
+                </div>
+                <h1 class="animate-in delay-2">Hi, I'm Daniel Wang</h1>
+                <p class="hero-description animate-in delay-3">
+                    Ph.D. student at <span>Yale University</span> researching 
+                    computer vision and machine learning. I build systems that understand, reconstruct, and predict 
+                    dynamic 3D scenes.
+                </p>
+                <div class="hero-buttons animate-in delay-4">
+                    <a href="#contact" class="cta-button">
+                        Get in Touch
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </a>
+                    <a href="#publications" class="cta-button cta-secondary">
+                        View Publications
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div>
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Publications</div>
+                    </div>
+                    <div>
+                        <div class="stat-number">NSF</div>
+                        <div class="stat-label">GRFP Fellow</div>
+                    </div>
+                    <div>
+                        <div class="stat-number">CMU</div>
+                        <div class="stat-label">B.S. '23</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Headshot -->
+            <div class="headshot-container animate-in delay-4">
+                <div class="headshot-bg"></div>
+                <!-- Replace the placeholder div below with an img tag pointing to your photo -->
+                <img src="photo.jpg" alt="Daniel Wang" class="headshot">
+            
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="about-grid">
+            <div>
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Background & Interests</p>
+            </div>
+            <div class="about-text">
+                <p>
+                    I'm a Ph.D. student in Computer Science at Yale University, advised by 
+                    <strong>Professor Alex Wong</strong>. My research lies at the 
+                    intersection of <span>3D computer vision</span>, 
+                    <span>neural rendering</span>, and 
+                    <span>deep learning</span>.
+                </p>
+                <p>
+                    I'm particularly excited about developing methods that can understand and predict the dynamics 
+                    of real-world 3D scenes. My recent work focuses on combining neural scene representations 
+                    like 3D Gaussian Splatting with sequence modeling to enable temporal extrapolation—predicting 
+                    how scenes will evolve beyond observed data.
+                </p>
+                <p>
+                    Before Yale, I completed my B.S. in Computer Science with a minor in Neural Computation 
+                    at Carnegie Mellon University (2023), where I worked with Professor Tai-Sing Lee on 
+                    computational neuroscience and neural network modeling of visual cortex.
+                </p>
+                <div class="award-box">
+                    <p class="award-title">🎉 NSF Graduate Research Fellowship (2025)</p>
+                    <p class="award-desc">
+                        Honored to receive support for my research in 3D representation learning.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Interests Section -->
+    <section id="research" class="research-section">
+        <h2 class="section-title">Research Interests</h2>
+        <p class="section-subtitle">Areas I'm actively exploring</p>
+        
+        <div class="research-grid">
+            <div class="interest-card">
+                <h3>3D Gaussian Splatting</h3>
+                <p>Novel view synthesis and dynamic scene reconstruction</p>
+            </div>
+            <div class="interest-card">
+                <h3>Neural Radiance Fields</h3>
+                <p>Implicit representations for 3D understanding</p>
+            </div>
+            <div class="interest-card">
+                <h3>Depth Estimation</h3>
+                <p>Monocular and multi-view depth prediction</p>
+            </div>
+            <div class="interest-card">
+                <h3>Multimodal Learning</h3>
+                <p>Bridging vision, language, and touch modalities</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="section">
+        <h2 class="section-title">Publications</h2>
+        <p class="section-subtitle">Selected work in top-tier venues</p>
+        
+        <div class="pub-grid">
+            <!-- Publication 1 -->
+            <div class="pub-card">
+                <div class="pub-image" style="background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);">
+                    <span class="badge first-author-badge">First Author</span>
+                    <!-- Replace with your paper figure: <img src="paper1-figure.png" alt="ODE-GS"> -->
+                    <div class="pub-image-placeholder">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <polyline points="21 15 16 10 5 21"/>
+                        </svg>
+                        <div>Paper Figure</div>
+                    </div>
+                </div>
+                <div class="pub-content">
+                    <span class="badge venue-badge">Under review at ICLR 2026</span>
+                    <h3 class="pub-title">ODE-GS: Latent ODEs for Dynamic Scene Extrapolation with 3D Gaussian Splatting</h3>
+                    <p class="pub-authors">D. Wang, P. Rim, T. Tian, A. Wong, G. Sundaramoorthi</p>
+                </div>
+            </div>
+
+            <!-- Publication 2 -->
+            <div class="pub-card">
+                <div class="pub-image" style="background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);">
+                    <!-- Replace with your paper figure -->
+                    <
+                    <div class="pub-image-placeholder">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <polyline points="21 15 16 10 5 21"/>
+                        </svg>
+                        <div>Paper Figure</div>
+                    </div>
+                </div>
+                <div class="pub-content">
+                    <span class="badge venue-badge">CVPR 2024</span>
+                    <h3 class="pub-title">Binding touch to everything: Learning unified multimodal tactile representations</h3>
+                    <p class="pub-authors">F. Yang, C. Feng, Z. Chen, H. Park, D. Wang, Y. Dou, et al.</p>
+                </div>
+            </div>
+
+            <!-- Publication 3 -->
+            <div class="pub-card">
+                <div class="pub-image" style="background: linear-gradient(135deg, #e0e7ff 0%, #eef2ff 100%);">
+                    <!-- Replace with your paper figure -->
+                    <div class="pub-image-placeholder">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <polyline points="21 15 16 10 5 21"/>
+                        </svg>
+                        <div>Paper Figure</div>
+                    </div>
+                </div>
+                <div class="pub-content">
+                    <span class="badge venue-badge">CVPR 2024</span>
+                    <h3 class="pub-title">WorDepth: Variational language prior for monocular depth estimation</h3>
+                    <p class="pub-authors">Z. Zeng, D. Wang, F. Yang, H. Park, S. Soatto, D. Lao, A. Wong</p>
+                </div>
+            </div>
+
+            <!-- Publication 4 -->
+            <div class="pub-card">
+                <div class="pub-image" style="background: linear-gradient(135deg, #ede9fe 0%, #f5f3ff 100%);">
+                    <!-- Replace with your paper figure -->
+                    <div class="pub-image-placeholder">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <polyline points="21 15 16 10 5 21"/>
+                        </svg>
+                        <div>Paper Figure</div>
+                    </div>
+                </div>
+                <div class="pub-content">
+                    <span class="badge venue-badge">ECCV 2024</span>
+                    <h3 class="pub-title">On the viability of monocular depth pre-training for semantic segmentation</h3>
+                    <p class="pub-authors">D. Lao, F. Yang, D. Wang, H. Park, S. Lu, A. Wong, S. Soatto</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <h2 class="section-title">Industry Experience</h2>
+        <p class="section-subtitle">Applying research to real-world problems</p>
+        
+        <div class="exp-grid">
+            <div class="exp-card">
+                <div class="exp-period">June 2024 – Present</div>
+                <h3 class="exp-company">RTX</h3>
+                <p class="exp-role">Computer Vision Intern</p>
+                <ul class="exp-highlights">
+                    <li>Proposed ODE-GS framework integrating 3D Gaussian Splatting with Transformer-based latent neural ODEs</li>
+                    <li>Achieved SOTA on D-NeRF, NVFi, HyperNeRF benchmarks with +21.4% PSNR improvement</li>
+                </ul>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-period">May 2024 – Aug 2024</div>
+                <h3 class="exp-company">Futurewei Technologies</h3>
+                <p class="exp-role">Computer Vision Intern</p>
+                <ul class="exp-highlights">
+                    <li>Unified 3D Gaussian Splatting with generative priors for unseen 3D reconstruction</li>
+                    <li>Outperformed SOTA methods by +2.30 dB PSNR</li>
+                </ul>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-period">June 2023 – Aug 2023</div>
+                <h3 class="exp-company">Lenovo</h3>
+                <p class="exp-role">Computer Vision Intern</p>
+                <ul class="exp-highlights">
+                    <li>4th place in VIPriors Object Detection Challenge at ICCV 2023</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Service -->
+    <section class="service-section">
+        <div class="service-container">
+            <div class="service-info">
+                <h3>Academic Service</h3>
+                <p>Reviewer for CVPR (2025, 2026), ICLR (2025, 2026), NeurIPS (2024, 2025)</p>
+            </div>
+            <div class="service-venues">
+                <span>Featured Venues</span>
+                <span class="venue-tag">CVPR</span>
+                <span class="venue-tag">ECCV</span>
+                <span class="venue-tag">ICLR</span>
+                <span class="venue-tag">NeurIPS</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <h2>Let's Connect!</h2>
+            <p>
+                I'm actively seeking research scientist and ML engineer positions in industry. 
+                If you're working on challenging problems in 3D vision, neural rendering, or 
+                foundation models, I'd love to hear from you!
+            </p>
+            
+            <div class="contact-buttons">
+                <a href="mailto:daniel.wang.dhw33@yale.edu" class="cta-button">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    Email Me
+                </a>
+                <a href="https://www.linkedin.com/in/daniel-wang-063597249" target="_blank" rel="noopener noreferrer" class="cta-button cta-secondary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    LinkedIn
+                </a>
+            </div>
+            
+            <div class="contact-info">
+                <span>daniel.wang.dhw33@yale.edu</span>
+                <span>•</span>
+                <span>(724) 508-4603</span>
+                <span>•</span>
+                <span>New Haven, CT</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div>© 2025 Daniel Wang</div>
+        <div>Yale Vision Lab • Computer Science</div>
+    </footer>
+</body>
+</html>

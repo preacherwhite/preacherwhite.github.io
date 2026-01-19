@@ -1,0 +1,178 @@
+\documentclass[11pt, letterpaper]{article}
+
+% --- Packages ---
+\usepackage[margin=0.5in]{geometry} 
+\usepackage{hyperref}   
+\usepackage{enumitem}   
+\usepackage{titlesec}   
+\usepackage{fontawesome5} 
+\usepackage{xcolor}     
+
+% --- Formatting Setup ---
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=teal,
+}
+
+% Custom section formatting
+\titleformat{\section}
+{\Large\bfseries\uppercase} 
+{}                          
+{0em}                       
+{}                          
+[\titlerule]                
+
+% Spacing settings
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+\setlength{\parindent}{0pt} 
+
+% --- FONT SIZE CONTROL FOR BULLETS ---
+\setlist[itemize]{before=\large} 
+\setlist[enumerate]{before=\large} 
+
+\newcommand{\me}[1]{\textbf{#1}}
+
+\begin{document}
+
+% --- Header ---
+\begin{center}
+    {\Huge \textbf{Daniel Wang}} \\ [4pt]
+    \small 
+    \faEnvelope \ \href{mailto:daniel.wang.dhw33@yale.edu}{daniel.wang.dhw33@yale.edu} \quad | \quad
+    \faPhone \ (724) 508-4603 \quad | \quad
+    \faLinkedin \ \href{https://www.linkedin.com/in/daniel-wang-063597249}{linkedin.com/in/daniel-wang}
+\end{center}
+
+% --- Education ---
+\section{Education}
+\textbf{Yale University} \hfill New Haven, CT \\
+\textit{Ph.D. in Computer Science} \hfill Expected May 2029
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item \textbf{Advisor:} Alex Wong
+    \item \textbf{Awards:} NSF Graduate Research Fellowship (2025)
+\end{itemize}
+
+\textbf{Carnegie Mellon University} \hfill Pittsburgh, PA \\
+\textit{B.S. in Computer Science, Minor in Neural Computation, University Honors} \hfill May 2023
+
+
+
+% --- Publications ---
+\section{Selected Publications}
+\begin{enumerate}[label={[\arabic*]}, itemsep=4pt]
+    \item \me{D. Wang}, P. Rim, T. Tian, A. Wong, G. Sundaramoorthi. ``ODE-GS: Latent ODEs for Dynamic Scene Extrapolation with 3D Gaussian Splatting.'' \textit{arXiv Preprint}, 2024. (Under review at ICLR 2026)
+
+    \item F. Yang, C. Feng, Z. Chen, H. Park, \me{D. Wang}, Y. Dou, et al. ``Binding touch to everything: Learning unified multimodal tactile representations.'' \textit{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, 2024.
+    
+    \item Z. Zeng, \me{D. Wang}, F. Yang, H. Park, S. Soatto, D. Lao, A. Wong. ``WorDepth: Variational language prior for monocular depth estimation.'' \textit{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, 2024.
+    
+    \item D. Lao, F. Yang, \me{D. Wang}, H. Park, S. Lu, A. Wong, S. Soatto. ``On the viability of monocular depth pre-training for semantic segmentation.'' \textit{European Conference on Computer Vision (ECCV)}, 2024.
+\end{enumerate}
+
+% --- Industry Experience ---
+\section{Industry Experience}
+
+\textbf{RTX} \hfill Remote \\
+\textit{Computer Vision Intern} \hfill June 2024 -- Present
+\begin{itemize}[noitemsep, topsep=2pt]
+    \item Proposed \textbf{ODE-GS}, a novel framework integrating 3D Gaussian Splatting with Transformer-based latent neural ODEs to enable continuous-time extrapolation of dynamic 3D scenes beyond the observed time window.
+    \item Formulated dynamic scene extrapolation as a sequence-to-sequence problem by decoupling reconstruction from forecasting; utilized a Transformer encoder to aggregate past Gaussian trajectories into a latent state evolved via a neural ODE, eliminating timestamp dependency.
+    \item Implemented a dynamic trajectory sampling strategy and an adaptive regularization mechanism (penalizing high-frequency oscillations in latent and 3D space) to enforce physical plausibility and spatio-temporal smoothness.
+    \item Achieved State-of-the-Art (SOTA) performance on D-NeRF, NVFi, and HyperNeRF benchmarks, improving extrapolation metrics by an average of $21.4\%$ PSNR compared to leading baselines like Deformable-GS and GaussianPrediction.
+\end{itemize}
+
+\vspace{6pt} 
+
+\textbf{Futurewei Technologies (IC Lab)} \hfill Remote \\
+\textit{Computer Vision Intern} \hfill May 2024 -- Aug 2024
+\begin{itemize}[noitemsep, topsep=2pt]
+    \item Proposed a novel pipeline for unseen 3D reconstruction and denoising, unifying 3D Gaussian Splatting (3DGS) with generative priors to resolve artifacts in occluded regions.
+    \item Developed a "Gaussian Importance" metric based on spatial variability to automatically detect and prune erroneous geometry (floaters/artifacts) without ground truth supervision.
+    \item Extended the RePaint diffusion algorithm to 3D voxel representations, utilizing Optimal Transport matching to inpaint consistent geometry in pruned areas.
+    \item Constructed a specialized multi-view dataset from Objaverse to benchmark limited-view reconstruction; outperformed SOTA methods (SplatFormer) by \textbf{+2.30 dB PSNR} and improved LPIPS scores.
+\end{itemize}
+
+\vspace{6pt} 
+
+\textbf{Lenovo} \hfill Remote \\
+\textit{Computer Vision Intern} \hfill June 2023 -- Aug 2023
+\begin{itemize}[noitemsep, topsep=2pt]
+    \item Developed and trained object detection and visual grounding models, improving  model performance with limited memory resources.
+    \item Pretrained the YOLOv8 backbone using masked image modeling (MIM) and fine-tuned the detector with elaborate augmentations.
+    \item Secured 4th position in the 2023 VIPriors Object Detection Challenge in ICCV 2023 workshop.
+\end{itemize}
+
+% --- Academic Research Experience ---
+\section{Academic Research Experience}
+
+\textbf{Yale Vision Lab} \hfill Yale University \\
+\textit{Research Assistant (Advisor: Alex Wong)} \hfill Aug 2023 -- Present
+\begin{itemize}[leftmargin=*, label={}, nolistsep]
+    \item \textbf{Depth-prediction as Pretraining for Object Detection}
+    \begin{itemize}[noitemsep, topsep=1pt]
+        \item Evaluated a novel approach leveraging depth prediction as pretraining for object detection, demonstrating the effectiveness of depth-pretrained models over alternatives methods like dinoV2.
+        \item Adapted a depth-pretrained ViT-L model as backbone on various detection and instance segmentation masks such as Mask-RCNN, Faster-RCNN.
+        \item Conducted extensive experiments on various datasets and hyperparameter settings, achieving SOTA performance on COCO dataset and surpassing dinov2 backbone on cityscapes.
+    \end{itemize}
+    
+    \vspace{4pt}
+    \item \textbf{Unsupervised 3D Semantic Segmentation with Motion Prior}
+    \begin{itemize}[noitemsep, topsep=1pt]
+        \item Developed a novel approach for unsupervised 3D point cloud segmentation by leveraging motion cues.
+        \item Employed soft contrastive learning to capture semantic similarities between 3D points.
+        \item Developed a novel technique that trains encoder on multiple frame input but using single frame input during inference by leveraging 2d motion and projection from 3d to 2d points.
+    \end{itemize}
+
+    \vspace{4pt}
+    \item \textbf{UniTouch: Binding Touch to Everything}
+    \begin{itemize}[noitemsep, topsep=1pt]
+        \item Contributed to the development of UniTouch, a unified tactile model connecting vision-based touch sensors to multiple modalities, including vision, language, and sound.
+        \item Designed and implemented an automated labeling system on Amazon Mechanical Turk for efficient image crowdsourcing, facilitating large-scale data collection.
+        \item Demonstrated UniTouch's zero-shot capabilities across various touch sensing tasks, from robot grasping prediction to touch image question answering, setting a new benchmark in multimodal tactile sensing.
+    \end{itemize}
+
+    \vspace{4pt}
+    \item \textbf{Variational Language Prior for Monocular Depth Estimation}
+    \begin{itemize}[noitemsep, topsep=1pt]
+        \item Introduced WorDepth, a novel method that leverages a variational approach to integrate language as a prior in Monocular Depth Estimation.
+        \item Utilized CLIP, a visual-language model, to exploit the semantic priors learned from its large-scale training data and guide the depth model with geometry priors associated with semantics.
+        \item Developed a three-stage approach: 1) Variational modeling of language prior, 2) Conditioned sampling from the scene layout distribution, and 3) Language prior-assisted depth estimator training.
+        \item Demonstrated state-of-the-art performance on the NYU Depth V2 and KITTI depth datasets, confirming the effectiveness of integrating language priors in depth estimation.
+    \end{itemize}
+\end{itemize}
+
+\vspace{6pt} 
+
+\textbf{Lee's Lab} \hfill Carnegie Mellon University \\
+\textit{Research Assistant (Advisor: Tai-Sing Lee)} \hfill Aug 2021 -- May 2023
+\begin{itemize}[leftmargin=*, label={}, nolistsep]
+    \item \textbf{Revealing the Complexity of V1 Neural Codes via CNN Modeling}
+    \begin{itemize}[noitemsep, topsep=1pt]
+        \item Analyzed 2-photon calcium imaging data set of 1000 neurons' responses to 35K-50K natural images.
+        \item Implemented and tuned the Shared Core Convolution Neural Network (CNN) model and predicted the collective response of all neurons in each site simultaneously.
+        \item Achieved state-of-the-art prediction performance in response correlation and tuning curve fitting.
+        \item Visualized neurons with image gradient descent algorithm based on negative max response loss function.
+        \item Demonstrated that trained neural networks reveal complex behaviors of V1 neurons, and the percentage of discovered complex neurons has a positive correlation with training set size.
+    \end{itemize}
+
+    \vspace{4pt}
+    \item \textbf{Investigating Contextual Processing in V1 Using Neurons In-Silico}
+    \begin{itemize}[noitemsep, topsep=1pt]
+        \item Observed with model experiments that image encoder only has high responses to the center area of the input, aligning with V1 neuron's receptive fields, while also showing surround suppression.
+        \item Experimented with various machine learning methods for reconstruction, such as direct CNN decoding, VAE latent space mapping, conditional GAN.
+        \item Reconstructed full-image details using generated response from image encoder and data-driven decoder.
+        \item Revealed that the CNN image encoder displays V1 neurons' contextual modulation effect and suggests that trained neural networks can serve as V1 neurons in-silico for investigating neural mechanisms.
+    \end{itemize}
+\end{itemize}
+% --- Technical Skills ---
+\section{Technical Skills}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item \textbf{Programming:} C, C++, Python, Java, SQL, SML, HTML, CSS, JavaScript, GO
+    \item \textbf{Data Analysis:} PyTorch, MATLAB, R
+    \item \textbf{Software \& Tools:} Microsoft Office, Git, LaTeX, Linux
+\end{itemize}
+\section{Academic Service}
+\textbf{Reviewer:} CVPR (2025,2026), ICLR (2025, 2026), NeurIPS (2024, 2025)
+\end{document}
