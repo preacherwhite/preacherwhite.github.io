@@ -79,9 +79,6 @@ Z. Zeng, **D. Wang**, F. Yang, H. Park, S. Soatto, D. Lao, A. Wong
 </div>
 </div>
 
-<span class='anchor' id='skills'></span>
-# 🛠 Technical Skills
-- **Programming:** C, C++, Python, Java, SQL, SML, HTML, CSS, JavaScript, GO
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ECCV 2024</div><img src='images/depthpre.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -94,6 +91,11 @@ D. Lao, F. Yang, **D. Wang**, H. Park, S. Lu, A. Wong, S. Soatto
 
 </div>
 </div>
+
+<span class='anchor' id='skills'></span>
+# 🛠 Technical Skills
+- **Programming:** C, C++, Python, Java, SQL, SML, HTML, CSS, JavaScript, GO
+
 
 <span class='anchor' id='honors'></span>
 # 🎖 Honors and Awards
@@ -118,3 +120,6 @@ D. Lao, F. Yang, **D. Wang**, H. Park, S. Lu, A. Wong, S. Soatto
 <span class='anchor' id='service'></span>
 # 🍎 Academic Service
 - **Reviewer:** CVPR (2025, 2026), ICLR (2025, 2026), NeurIPS (2024, 2025)
+
+<script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=iZ5OYAIw6YlHTKX1kDtj50JutlocJzkOmjacYPN4Kvk"></script>
+
