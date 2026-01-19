@@ -17,7 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am a 3rd year Ph.D. student in Computer Science at **Yale University**, advised by [Alex Wong](https://alexwong.net). My research interests lie in **Computer Vision** and **Neural Machine Translation**. Previously, I received my B.S. in Computer Science from **Carnegie Mellon University** with University Honors and a Minor in Neural Computation.
+I am a 3rd year Ph.D. student in Computer Science at **Yale University**, advised by [Alex Wong](https://alexwong.net). My research interests lie in **3D Computer Vision**, **Multi-modal Machine Learning**, and **Representation Learning**. Previously, I received my B.S. in Computer Science from **Carnegie Mellon University** with University Honors and a Minor in Neural Computation, advised by [Tai-Sing Lee].
 
 You can find my full CV [here](files/cv.pdf) (placeholder link).
 
@@ -28,7 +28,7 @@ You can find my full CV [here](files/cv.pdf) (placeholder link).
         NSF Graduate Research Fellowship (2025) 🏆
     </div>
     <div style="font-size: 0.9rem; color: #6b7280;">
-        Awarded for potential significant research achievements in STEM.
+        Honored to receive support for my research in 3D Computer Vision.
     </div>
 </div>
 
@@ -40,41 +40,57 @@ You can find my full CV [here](files/cv.pdf) (placeholder link).
 
 # 📝 Selected Publications 
 
-<div class='paper-box'><div class='paper-box-text' markdown="1">
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Preprint 2024</div><img src='images/odegs.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
 
 [ODE-GS: Latent ODEs for Dynamic Scene Extrapolation with 3D Gaussian Splatting](javascript:void(0))
 
 **D. Wang**, P. Rim, T. Tian, A. Wong, G. Sundaramoorthi
 
 *arXiv Preprint*, 2024. (Under review at ICLR 2026)
-</div></div>
 
-<div class='paper-box'><div class='paper-box-text' markdown="1">
+[**Paper**](javascript:void(0))
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2024</div><img src='images/UniTouch.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
 
 [Binding touch to everything: Learning unified multimodal tactile representations](javascript:void(0))
 
 F. Yang, C. Feng, Z. Chen, H. Park, **D. Wang**, Y. Dou, et al.
 
 *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)*, 2024.
-</div></div>
 
-<div class='paper-box'><div class='paper-box-text' markdown="1">
+[**Paper**](javascript:void(0))
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2024</div><img src='images/WorDepth.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
 
 [WorDepth: Variational language prior for monocular depth estimation](javascript:void(0))
 
 Z. Zeng, **D. Wang**, F. Yang, H. Park, S. Soatto, D. Lao, A. Wong
 
 *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)*, 2024.
-</div></div>
 
-<div class='paper-box'><div class='paper-box-text' markdown="1">
+[**Paper**](javascript:void(0))
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ECCV 2024</div><img src='images/depthpre.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
 
 [On the viability of monocular depth pre-training for semantic segmentation](javascript:void(0))
 
 D. Lao, F. Yang, **D. Wang**, H. Park, S. Lu, A. Wong, S. Soatto
 
 *European Conference on Computer Vision (ECCV)*, 2024.
-</div></div>
+
+[**Paper**](javascript:void(0))
+</div>
+</div>
 
 # 🎖 Honors and Awards
 - *2025* **NSF Graduate Research Fellowship** 🏆
@@ -83,13 +99,8 @@ D. Lao, F. Yang, **D. Wang**, H. Park, S. Lu, A. Wong, S. Soatto
 
 # 📖 Education
 - *2023.08 - Present*, **Yale University**, New Haven, CT
-  - Ph.D. in Computer Science (Expected May 2029)
-  - Advisor: Alex Wong
-  - Awards: **NSF Graduate Research Fellowship (2025)**
 
 - *2019.08 - 2023.05*, **Carnegie Mellon University**, Pittsburgh, PA
-  - B.S. in Computer Science, Minor in Neural Computation
-  - University Honors
 
 # 💻 Industry Experience
 - *2025.05 - 2025.08*, **Futurewei Technologies (IC Lab)**, Santa Clara, CA
