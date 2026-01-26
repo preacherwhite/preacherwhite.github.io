@@ -35,8 +35,8 @@ You can find my full CV [here](files/cv.pdf) (placeholder link).
 
 <span class='anchor' id='news'></span>
 # 🔥 News
+- *2025.05*: &nbsp;🎉🎉 Joined **Futurewei Technologies** as a Computer Vision Intern.
 - *2024.06*: &nbsp;🎉🎉 Joined **RTX** as a Computer Vision Intern.
-- *2024.05*: &nbsp;🎉🎉 Joined **Futurewei Technologies** as a Computer Vision Intern.
 - *2023.08*: &nbsp;🎉🎉 Started Ph.D. in Computer Science at **Yale University**.
 - *2023.06*: &nbsp;🎉🎉 Joined **Lenovo** as a Computer Vision Intern.
 
