@@ -43,7 +43,7 @@ You can find my full CV [here](files/cv.pdf) (placeholder link).
 <span class='anchor' id='publications'></span>
 # 📝 Selected Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR 2026</div><div class="badge">First Author</div><img src='images/odegs.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">First Author, ICLR 2026</div><img src='images/odegs.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [ODE-GS: Latent ODEs for Dynamic Scene Extrapolation with 3D Gaussian Splatting](https://arxiv.org/abs/2506.05480)
