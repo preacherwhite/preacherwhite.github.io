@@ -21,7 +21,7 @@ I am a 3rd year Ph.D. student in Computer Science at **Yale University**, advise
 
 You can find my full CV [here](files/cv.pdf) (placeholder link).
 
-<a href='https://scholar.google.com/citations?user=Rk_pDPEAAAAJ&hl=en'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>
+<a href='https://scholar.google.com/citations?user=Rk_pDPEAAAAJ&hl=en' target='_blank'><i class="fas fa-fw fa-graduation-cap"></i> Google Scholar</a>
 
 <div style="padding: 1.5rem; background: linear-gradient(135deg, #f0f7ff 0%, #faf9f7 100%); border-radius: 12px; border-left: 4px solid #3b7dd8; margin-top: 2rem; margin-bottom: 2rem;">
     <div style="font-family: 'Inter', sans-serif; font-size: 0.95rem; color: #374151; font-weight: 500; margin-bottom: 0.5rem;">
@@ -43,14 +43,14 @@ You can find my full CV [here](files/cv.pdf) (placeholder link).
 <span class='anchor' id='publications'></span>
 # 📝 Selected Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under review: ICLR 2026</div><img src='images/odegs.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR 2026</div><div class="badge">First Author</div><img src='images/odegs.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [ODE-GS: Latent ODEs for Dynamic Scene Extrapolation with 3D Gaussian Splatting](https://arxiv.org/abs/2506.05480)
 
 **D. Wang**, P. Rim, T. Tian, A. Wong, G. Sundaramoorthi
 
-*Under review at ICLR 2026*
+*Proceedings of International Conference on Learning Representations (ICLR) 2026*
 
 </div>
 </div>
