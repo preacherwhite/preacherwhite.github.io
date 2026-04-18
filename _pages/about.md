@@ -47,7 +47,7 @@ You can find my full CV [here](files/cv.pdf) (placeholder link).
 <div class='paper-box-text' markdown="1">
 
 [ODE-GS: Latent ODEs for Dynamic Scene Extrapolation with 3D Gaussian Splatting](https://arxiv.org/abs/2506.05480)
-
+[[Code]](https://github.com/preacherwhite/ODE-GS)
 **D. Wang**, P. Rim, T. Tian, A. Wong, G. Sundaramoorthi
 
 *Proceedings of International Conference on Learning Representations (ICLR) 2026*
